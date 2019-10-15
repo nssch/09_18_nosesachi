@@ -1,0 +1,106 @@
+h1 {
+  /*線の種類（実線） 太さ 色*/
+  border-bottom: solid 3px black;
+  margin: 10px 30px;
+}
+
+.nav {
+  list-style: none;
+  overflow: hidden;
+}
+
+ 
+.nav li {
+  width: 140px;
+  text-align: center;
+  background-color: rgb(168, 165, 165);
+  float: left;
+  height: 30px;
+  line-height: 30px;
+  margin-right: 10px;
+  list-style: none;
+}
+ 
+.nav li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.form_area{
+    margin: 30px;
+}
+input{
+    width: 95%;
+    font-size: 1.5em;
+    padding:0.5em;
+    margin-right:30px;
+    margin-right:30px;
+}
+textarea{
+    width: 95%;
+    font-size: 1.5em;
+    height: 2em;
+    padding: 0.5em;
+}
+input:focus{
+    background: lightblue;
+}
+textarea:focus{
+    background: lightblue;
+}
+label{
+    font-size: 1.3em;
+    
+}
+.button{
+padding: 15px 40px;
+font-size: 1.2em;
+background-color: rgb(64, 62, 71);
+color: #fff;
+border-style: none;
+margin-left: 30px;
+width: 250px;
+
+}
+.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button :hover{
+  cursor: pointer;
+}
+.datalist>li{
+  list-style: none;
+  border: rgb(145, 143, 143) 1px solid;
+}
+
+
+.hyouka{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.hyouka input[type='radio']{
+  display: none;
+}
+.hyouka input[type='radio']{
+  display: none;
+}
+.hyouka label{
+  position: relative;
+  /* padding: 20px 0px 20px 0px; */
+  color: #bbb;
+  cursor: pointer;
+  font-size: 40px;
+}
+ 
+.hyouka label:hover,
+.hyouka label:hover ~ label,
+.hyouka input[type='radio']:checked ~ label{
+  color: #faee2e;
+}
