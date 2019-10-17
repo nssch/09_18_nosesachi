@@ -16,17 +16,6 @@ $url = $_POST['url'];
 $comment = $_POST['comment'];
 $hoshi = $_POST['hoshi'];
 
-//DB接続
-// $dbn = 'mysql:dbname=gsacfd04_18;charset=utf8;port=3306;host=localhost';
-// $user =  'root';
-// $pwd = '';
-
-// try {
-//     $pdo = new PDO($dbn, $user, $pwd);
-// } catch (PDOException $e) {
-//     exit('dbError:' . $e->getMessage());
-// }
-
 //db接続
 $pdo = connectToDb();
 

@@ -29,11 +29,20 @@ if ($status == false) {
     //Selectデータの数だけ自動でループしてくれる
     //http://php.net/manual/ja/pdostatement.fetch.php
     while ($result = $stmt->fetch(PDO::FETCH_ASSOC)) {
-        $view .= '<li class="list-group-item">';
-        $view .= '<p>' . $result['name'] . '-' . $result['url'] . '-' . $result['comment'] . '-' . '★' . $result['hoshi'] . '</p>';
+        $view .= '<div class="card">';
+        $view .= '<div class="card-body">';
+        $view .= '<h4 class="card-title">' . $result['name'];
+        $view .= '</h4>';
         $view .= '<a href="detail.php?id=' . $result['id'] . '" class="badge badge-primary">Edit</a>';
         $view .= '<a href="delete.php?id=' . $result['id'] . '" class="badge badge-danger">Delete</a>';
-        $view .= '</li>';
+        $view .= '<p class="card-text">' . $result['comment'];
+        $view .= '</p>';
+        $view .= '<p class="card-text">' . '☆' . $result['hoshi'];
+        $view .= '</p>';
+        $view .= '<a href="' . $result['url'] . '" class="card-link">' . 'link';
+        $view .= '</a>';
+        $view .= '</div>';
+        $view .= '</div>';
     }
 }
 ?>
@@ -59,8 +68,8 @@ if ($status == false) {
         </div>
         <nav class="nav">
             <ul>
-                <li class="btn"><a href="index.php">登録ページ</a></li>
-                <li class="btn"><a href="select.php">一覧ページ</a></li>
+                <li class="btn"><a href="index.php">登録</a></li>
+                <li class="btn"><a href="select.php">一覧</a></li>
             </ul>
         </nav>
     </header>

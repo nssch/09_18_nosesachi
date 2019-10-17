@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bookmark</title>
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 
 <body>
@@ -17,8 +17,8 @@
         </div>
         <nav class="nav">
             <ul>
-                <li class="btn"><a href="index.php">登録ページ</a></li>
-                <li class="btn"><a href="select.php">一覧ページ</a></li>
+                <li class="btn"><a href="index.php">登録</a></li>
+                <li class="btn"><a href="select.php">一覧</a></li>
             </ul>
         </nav>
     </header>
