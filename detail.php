@@ -68,15 +68,15 @@ if ($status == false) {
         </div>
 
         <div class="hyouka">
-            <input id="hoshi1" type="radio" name="hoshi" value="<?= $rs['hoshi'] ?>" />
+            <input id="hoshi1" type="radio" name="hoshi" <?= $rs['hoshi'] != '5' ?: 'selected' ?> value="5" />
             <label for="hoshi1">★</label>
-            <input id="hoshi2" type="radio" name="hoshi" value="<?= $rs['hoshi'] ?>" />
+            <input id="hoshi2" type="radio" name="hoshi" <?= $rs['hoshi'] != '4' ?: 'selected' ?> value="4" />
             <label for="hoshi2">★</label>
-            <input id="hoshi3" type="radio" name="hoshi" value="<?= $rs['hoshi'] ?>" />
+            <input id="hoshi3" type="radio" name="hoshi" <?= $rs['hoshi'] != '3' ?: 'selected' ?> value="3" />
             <label for="hoshi3">★</label>
-            <input id="hoshi4" type="radio" name="hoshi" value="<?= $rs['hoshi'] ?>" />
+            <input id="hoshi4" type="radio" name="hoshi" <?= $rs['hoshi'] != '2' ?: 'selected' ?> value="2" />
             <label for="hoshi4">★</label>
-            <input id="hoshi5" type="radio" name="hoshi" value="<?= $rs['hoshi'] ?>" />
+            <input id="hoshi5" type="radio" name="hoshi" <?= $rs['hoshi'] != '1' ?: 'selected' ?> value="1" />
             <label for="hoshi5">★</label>
         </div>
 

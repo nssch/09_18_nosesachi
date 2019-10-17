@@ -45,6 +45,18 @@ if ($status == false) {
         $view .= '</div>';
     }
 }
+//評価を★で表示させたかったが失敗
+// if ($result['hoshi'] == '1') {
+//     echo '★';
+// } else if ($result['hoshi'] == '2') {
+//     echo '★★';
+// } else if ($result['hoshi'] == '3') {
+//     echo '★★★';
+// } else if ($result['hoshi'] == '4') {
+//     echo '★★★★';
+// } else if ($result['hoshi'] == '5') {
+//     echo '★★★★★';
+// }
 ?>
 
 
@@ -74,7 +86,7 @@ if ($status == false) {
         </nav>
     </header>
 
-    <div>
+    <div class="list">
         <ul class="datalist">
             <!-- ここにDBから取得したデータを表示しよう -->
             <?= $view ?>
