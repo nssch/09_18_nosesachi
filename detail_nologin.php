@@ -2,7 +2,7 @@
 //ログインチェック
 session_start();
 include('functions.php');
-checkSessionid();
+
 
 
 
@@ -43,7 +43,7 @@ if ($status == false) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bookmark</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
 </head>
@@ -56,19 +56,19 @@ if ($status == false) {
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <ul class="navbar-nav">
                 <li class="nav-item"><a class="nav-link" href="index.php">Bookmark登録</a></li>
-                <li class="nav-item"><a class="nav-link" href="select.php">Bookmark一覧</a></li>
+                <li class="nav-item"><a class="nav-link" href="select_nologin.php">Bookmark一覧</a></li>
             </ul>
         </nav>
     </header>
 
-    <form action="update.php" method="POST">
+    <form>
         <div class="form_area">
             <label for="name">書籍名</label><br>
-            <input type="text" name="name" value="<?= $rs['name'] ?>"><br>
+            <input type="text" name="name" value="<?= $rs['name'] ?>" disabled="disabled"><br>
             <label for="url">書籍のURL</label><br>
-            <input type="url" name="url" value="<?= $rs['url'] ?>"><br>
+            <input type="url" name="url" value="<?= $rs['url'] ?>" disabled="disabled"><br>
             <label for="comment">感想コメント</label><br>
-            <textarea name="comment"><?= $rs['comment'] ?></textarea>
+            <textarea name="comment" disabled="disabled"><?= $rs['comment'] ?></textarea>
 
         </div>
 
@@ -86,9 +86,9 @@ if ($status == false) {
         </div>
 
 
-        <div class="submit">
+        <!-- <div class="submit">
             <button type="submit" class="button">登録</button>
-        </div>
+        </div> -->
 
         <input type="hidden" name="id" value="<?= $rs['id'] ?>">
 

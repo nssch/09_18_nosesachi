@@ -2,15 +2,7 @@
 //ログインチェック
 session_start();
 include('functions.php');
-checkSessionid();
-//chk_kanri_flg_menu();
 
-//menuきめる
-if ($_SESSION['kanri_flg'] == 0) {
-    $menu = menu();
-} else {
-    $menu = kanri_menu();
-}
 
 //db接続
 $pdo = connectToDb();
@@ -34,8 +26,7 @@ if ($status == false) {
         $view .= '<div class="card-body">';
         $view .= '<h4 class="card-title">' . $result['name'];
         $view .= '</h4>';
-        $view .= '<a href="detail.php?id=' . $result['id'] . '" class="badge badge-primary">Edit</a>';
-        $view .= '<a href="delete.php?id=' . $result['id'] . '" class="badge badge-danger">Delete</a>';
+        $view .= '<a href="detail_nologin.php?id=' . $result['id'] . '" class="badge badge-primary">detail</a>';
         $view .= '<p class="card-text">' . $result['comment'];
         $view .= '</p>';
         $view .= '<p class="card-text">' . '☆' . $result['hoshi'];
@@ -46,22 +37,8 @@ if ($status == false) {
         $view .= '</div>';
     }
 }
-//評価を★で表示させたかったが失敗
-// if ($result['hoshi'] == '1') {
-//     echo '★';
-// } else if ($result['hoshi'] == '2') {
-//     echo '★★';
-// } else if ($result['hoshi'] == '3') {
-//     echo '★★★';
-// } else if ($result['hoshi'] == '4') {
-//     echo '★★★★';
-// } else if ($result['hoshi'] == '5') {
-//     echo '★★★★★';
-// }
+
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -80,12 +57,9 @@ if ($status == false) {
             <h1>Bookmark</h1>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-
             <ul class="navbar-nav">
-                <?= $menu ?>
-                <!-- <li class="btn"><a href="index.php">登録</a></li>
-                <li class="btn"><a href="select.php">一覧</a></li>
-                <li class="btn"><a href="login.php">LOGOUT</a></li> -->
+                <li class="nav-item"><a class="nav-link" href="index.php">Bookmark登録</a></li>
+                <li class="nav-item"><a class="nav-link" href="select_nologin.php">Bookmark一覧</a></li>
             </ul>
         </nav>
     </header>

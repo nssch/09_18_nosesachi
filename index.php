@@ -1,3 +1,21 @@
+<?php
+//ログインチェック
+session_start();
+include('functions.php');
+checkSessionid();
+
+//menuきめる
+if ($_SESSION['kanri_flg'] == 0) {
+    $menu = menu();
+} else {
+    $menu = kanri_menu();
+}
+
+
+//$menu = menu($_SESSION['kanri_flg']);
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,10 +33,11 @@
         <div>
             <h1>Bookmark</h1>
         </div>
-        <nav class="nav">
-            <ul>
-                <li class="btn"><a href="index.php">登録</a></li>
-                <li class="btn"><a href="select.php">一覧</a></li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <ul class="navbar-nav">
+                <?= $menu ?>
+                <!-- <li class="btn"><a href="index.php">登録</a></li>
+                <li class="btn"><a href="select.php">一覧</a></li> -->
             </ul>
         </nav>
     </header>
